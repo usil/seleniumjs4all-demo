@@ -31,12 +31,25 @@ https://github.com/usil/seleniumjs4all/wiki/Send-report-by-mail
 <br>
 <br>
 
-# Advanced settings
+# RESULTS
+
+### - Bash report
+![image](https://user-images.githubusercontent.com/3322836/200095302-3f7c81d9-239e-41c7-bfd9-36ccdb5203dd.png)
+
+### - Web report
+
+![image](https://user-images.githubusercontent.com/3322836/200892976-c2c0ad2c-a5a3-4c33-bb21-23de94e64316.png)
+
+<br>
+<br>
+<br>
+
+# Advances configurations
+
+https://github.com/usil/seleniumjs4all/blob/fix-CustomEnviroment/README.md
 
 
-
-
-## Contributors
+# Contributors
 
 <table>
   <tbody>
