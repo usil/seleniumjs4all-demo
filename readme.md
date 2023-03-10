@@ -1,0 +1,56 @@
+# **seleniumjs4all - demo**
+
+Collection of tests, more technical details can be found here https://github.com/usil/seleniumjs4all/blob/fix-CustomEnviroment/README.md
+
+## Requirements
+
+- nodejs >= 16
+- Google Chrome 110.0.5481.177-1 ( Desktop and Docker)
+
+
+# One click usage (chrome)
+
+```bash
+npm uninstall chromedriver
+npm install chromedriver --detect_chromedriver_version
+npm install
+npm run start
+```
+
+# One click usage (docker & chrome)
+
+Add the required variables in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
+
+```
+docker build --progress=plain -t seleniumjs4all-demo-selenium-automations-nodejs .
+```
+
+## Send report by mail
+
+https://github.com/usil/seleniumjs4all/wiki/Send-report-by-mail
+<br>
+<br>
+
+# Advanced settings
+
+
+
+
+## Contributors
+
+<table>
+  <tbody>
+    <td>
+      <img src="https://avatars0.githubusercontent.com/u/3322836?s=460&v=4" width="100px;"/>
+      <br />
+      <label><a href="http://jrichardsz.github.io/">JRichardsz</a></label>
+      <br />
+    </td>  
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/66818290?s=400&u=d2f95a7497efd7fa830cf96fc2dc01120f27f3c5&v=4" width="100px;"/>
+      <br />
+      <label><a href="https://github.com/iSkyNavy">Diego Ramos</a></label>
+      <br />
+    </td>
+  </tbody>
+</table>

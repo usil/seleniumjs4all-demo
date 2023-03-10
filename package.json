@@ -1,0 +1,23 @@
+{
+  "name": "seleniumjs4all-demo",
+  "version": "1.0.0",
+  "description": "Hello world seleniumjs4all",
+  "main": "index.js",
+  "scripts": {
+    "start": "selenium4all"
+  },
+  "keywords": [
+    "selenium",
+    "selenium4all",
+    "jest"
+  ],
+  "author": "Diego Ramos",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "jest": "^29.5.0",
+    "jest-config": "^29.5.0",
+    "selenium-webdriver": "^4.8.1",
+    "selenium4all": "github:usil/seleniumjs4all#fix-CustomEnviroment"
+  }
+}
