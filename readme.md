@@ -1,18 +1,35 @@
 # **seleniumjs4all - demo**
 
-Collection of tests, more technical details can be found here https://github.com/usil/seleniumjs4all/blob/fix-CustomEnviroment/README.md
+Collection of tests, more technical details can be found here https://github.com/usil/seleniumjs4all/blob/fix-windows/README.md
 
 ## Requirements
 
 - nodejs >= 16
 - Google Chrome 110.0.5481.177-1 ( Desktop and Docker)
+- Chromium <= 110.0.5481 ( Windows )
 
+## Config
 
-# One click usage (chrome)
+```
+- Config your browserOptions.json
+- Config your testOptions.json
+```
+
+# One click usage (chrome & linux)
 
 ```bash
 npm uninstall chromedriver
 npm install chromedriver --detect_chromedriver_version
+npm install
+npm run start
+```
+
+# One click usage (chromium & windows)
+- List of chromium versions to download https://chromium.cypress.io/
+
+```bash
+npm uninstall chromedriver
+npm install chromedriver --include_chromium --detect_chromedriver_version
 npm install
 npm run start
 ```
