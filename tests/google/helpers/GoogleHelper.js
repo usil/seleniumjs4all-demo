@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { until, By, Key } = require("selenium-webdriver");
 
-const initGoogle = {
+const GoogleHelper = {
     async checkSearchInput(driver) {
         const condition = until.elementLocated(By.name("q"));
 
@@ -23,4 +23,4 @@ const initGoogle = {
     }
 }
 
-module.exports = initGoogle;
+module.exports = GoogleHelper;

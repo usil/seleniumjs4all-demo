@@ -1,21 +1,40 @@
 # **seleniumjs4all - demo**
 
-Collection of tests, more technical details can be found here https://github.com/usil/seleniumjs4all/blob/fix-windows/README.md
+Simple hello world tests usign selenium and seleniumjs4all
+
+More technical details can be found here https://github.com/usil/seleniumjs4all
 
 ## Requirements
 
 - nodejs >= 16
-- Google Chrome 110.0.5481.177-1 ( Desktop and Docker)
-- Chromium <= 110.0.5481 ( Windows )
+
+**For Linux**
+
+- Google Chrome 110.0.5481.177-1 . How to install a custom version [here](https://github.com/usil/seleniumjs4all/wiki/Browsers#chrome--linux)
+- Docker (optional)
+
+**For Windows**
+
+- Chromium <= 110.0.5481 (Tested on 2023 march)
+  - Installer link: https://chromium.cypress.io/win64/beta/110.0.5481.38 
+  - More versions here: https://chromium.cypress.io/
+
+**For server executions with docker & headless**
+
+- Docker
 
 ## Config
+
+By default these files are already configured.
 
 ```
 - Config your browserOptions.json
 - Config your testOptions.json
 ```
 
-# One click usage (chrome & linux)
+For complex escenarios check this: https://github.com/usil/seleniumjs4all/tree/fix-windows#advanced-configurations or to send email notifications https://github.com/usil/seleniumjs4all/wiki/Send-report-by-mail
+
+## Run tests with chrome & linux
 
 ```bash
 npm uninstall chromedriver
@@ -24,8 +43,17 @@ npm install
 npm run start
 ```
 
-# One click usage (chromium & windows)
-- List of chromium versions to download https://chromium.cypress.io/
+## Run tests with linux & docker
+
+```
+docker build --progress=plain -t seleniumjs4all-demo-selenium-automations-nodejs .
+```
+
+If your tests has variables, add them in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
+
+## Run tests with chrome & windows
+
+For windows user, check this https://github.com/usil/seleniumjs4all/wiki/Troubleshooting#webdrivererror-unknown-error-cannot-find-chrome-binary
 
 ```bash
 npm uninstall chromedriver
@@ -34,36 +62,17 @@ npm install
 npm run start
 ```
 
-# One click usage (docker & chrome)
+## Result
 
-Add the required variables in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
+If you don't have any error, you should have this log in the shell or cmd:
 
-```
-docker build --progress=plain -t seleniumjs4all-demo-selenium-automations-nodejs .
-```
+![image](https://user-images.githubusercontent.com/3322836/225386044-ac7f7faa-1aef-474a-8b4f-7faaa7e0c025.png)
 
-## Send report by mail
+and in the **report** folder you will find a folder with the execution id:
 
-https://github.com/usil/seleniumjs4all/wiki/Send-report-by-mail
-<br>
-<br>
+![image](https://user-images.githubusercontent.com/3322836/225386312-2c3dfcb8-4c93-4b87-9cbc-39943b7f91de.png)
 
-# RESULTS
-
-### - Bash report
-![image](https://user-images.githubusercontent.com/3322836/200095302-3f7c81d9-239e-41c7-bfd9-36ccdb5203dd.png)
-
-### - Web report
-
-![image](https://user-images.githubusercontent.com/3322836/200892976-c2c0ad2c-a5a3-4c33-bb21-23de94e64316.png)
-
-<br>
-<br>
-<br>
-
-# Advances configurations
-
-https://github.com/usil/seleniumjs4all/blob/fix-CustomEnviroment/README.md
+![image](https://user-images.githubusercontent.com/3322836/225387370-57ecdf8c-929b-49fa-8178-3dfa62ffcab6.png)
 
 
 # Contributors

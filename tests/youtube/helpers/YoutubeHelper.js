@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { until, By } = require("selenium-webdriver")
 
-const initYoutube = {
+const YoutubeHelper = {
     async checkMenuButton(driver) {
         const condition = until.elementLocated(By.id("guide-button"));
         const menuButton = await driver.wait( async driver => condition.fn(driver));
@@ -18,4 +18,4 @@ const initYoutube = {
 }
 
 
-module.exports = initYoutube;
+module.exports = YoutubeHelper;

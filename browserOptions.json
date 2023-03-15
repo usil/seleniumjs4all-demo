@@ -7,7 +7,6 @@
       "--disable-dev-shm-usage",
       "--headless",
       "--window-size=2200,1600"
-    ],
-    "setChromeBinaryPath": "C:\\Users\\Usuario\\AppData\\Local\\Chromium\\Application\\chrome.exe"
+    ]
   }
 }
