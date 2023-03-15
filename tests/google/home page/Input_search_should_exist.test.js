@@ -12,7 +12,7 @@ describe('Google - Inicio', () => {
         global.driver = driver;
         await driver.get(URL_BASE);
       });
-    test('Debe mostrar el search en el inicio', async () => {
+    test('dfdca452f210 - Debe mostrar el search en el inicio', async () => {
         const condition = await until.elementLocated(By.name("q"));
         const searchInput = await driver.wait( async driver => condition.fn(driver) , 4 * 1000, "There isn't search input", 5 * 100);
         expect(searchInput).to.exist;

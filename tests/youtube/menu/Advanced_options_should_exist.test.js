@@ -12,7 +12,7 @@ describe('Youtube - Init', () => {
         global.driver = driver;
         await driver.get(URL_BASE);
       });
-    test('Debe mostrar el contenido del menu ', async () => {
+    test('20803bcd4ada - Debe mostrar el contenido del menu ', async () => {
         const condition = await until.elementLocated(By.id("contentContainer"));
         const menuButtonCondition = until.elementLocated(By.id("guide-button"));
         const menuButton = await driver.wait( async driver => menuButtonCondition.fn(driver));
