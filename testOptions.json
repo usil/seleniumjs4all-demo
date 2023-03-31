@@ -1,5 +1,5 @@
 {
-  "files": [],
+  "filterByRegexTestName": "^.+\\.read\\.test\\.js$",
   "excludeFiles":[],
   "virtualUserMultiplier": 1,
   "reportMode": "dynamicDeep",
@@ -25,7 +25,6 @@
     {
       "skip": false,
       "identifier": "Seleniumjs4all-demo",
-      "files": [],
       "variables": {
         "google":{
           "base_url": "https://www.google.com/"
