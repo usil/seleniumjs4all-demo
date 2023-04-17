@@ -4,7 +4,8 @@
   "description": "Hello world seleniumjs4all",
   "main": "index.js",
   "scripts": {
-    "start": "selenium4all"
+    "start": "selenium4all",
+    "generate-files": "selenium4all-generate-files"
   },
   "keywords": [
     "selenium",
