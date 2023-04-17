@@ -13,11 +13,12 @@ describe('Wikipedia - portal', () => {
         global.driver = driver;
         await driver.get(URL_BASE);
     });
-    test('search keyword in wikipedia summary table and validate content.test', async () => {
+    test('search keyword in wikipedia summary table and validate content', async () => {
         const searchBox = await driver.findElement(By.name("search"));
         await searchBox.sendKeys(wikiSearch, Key.RETURN);
         let el = await driver.findElement(By.className("mw-search-results"));
-        await driver.wait(until.elementIsVisible(el), 3000);
+        const conition = until.elementIsVisible(el);
+        await driver.wait(driver => conition.fn(driver), 3000);
         const searchList = await driver.findElement(By.className("mw-search-results"));
         const linksContainers = await searchList.findElements(
             By.className("mw-search-result")
@@ -27,14 +28,16 @@ describe('Wikipedia - portal', () => {
             By.className("mw-search-result-heading")
         );
         //validate if exist and added click function
-        await driver.wait(until.elementIsVisible(firstResult), 3000);
+        const conditionFirstResult = until.elementIsVisible(firstResult);
+        await driver.wait(driver => conditionFirstResult.fn(driver), 3000);
         const firstResultLink = await firstResult.findElement(By.xpath("./a"));
         await firstResultLink.click();
         // await driver.executeScript("arguments[0].click();", firstResultLink);
         //get box
         const box = await driver.findElement(By.className("infobox"));
         //valite if box exist and get ths and tds
-        await driver.wait(until.elementIsVisible(box), 3000);
+        const conditionBox = until.elementIsVisible(box);
+        await driver.wait(driver => conditionBox.fn(driver), 3000);
         let ths = await box.findElements(By.xpath("./tbody/tr/th[@scope='row']"));
         let tds = await box.findElements(By.xpath("./tbody/tr/td[@colspan='2']"));
         let columnNameResult = null;
@@ -42,7 +45,6 @@ describe('Wikipedia - portal', () => {
         for (let i = 0; i < tds.length; i++) {
             const columnNameResultLoop = await ths[i].getText();
             const columnValueResultLoop = await tds[i].getText();
-            // console.log(columnNameResultLoop);
             if (columnNameResultLoop === expectColumnName ) {
                 columnNameResult = columnNameResultLoop;
                 columnValueResult = columnValueResultLoop
