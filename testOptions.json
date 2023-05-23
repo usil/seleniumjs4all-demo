@@ -1,5 +1,4 @@
 {
-  "filterByRegexTestName": "^.+\\.read\\.test\\.js$",
   "excludeFiles":[],
   "virtualUserMultiplier": 1,
   "reportMode": "dynamicDeep",

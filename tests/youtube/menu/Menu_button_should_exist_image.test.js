@@ -11,7 +11,7 @@ describe('Youtube - Init', () => {
         global.driver = driver;
         await driver.get(URL_BASE);
       });
-    test('ce6645f584bf - Debe encontrar el boton de menu de youtube ', async () => {
+    test('[ce6645f584bf] - Debe encontrar el boton de menu de youtube ', async () => {
         const condition = await until.elementLocated(By.id("guide-button"));
         const menuButton = await driver.wait( async driver => condition.fn(driver));
         expect(menuButton, "Menu button not exist").to.be.exist;
