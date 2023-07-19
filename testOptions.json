@@ -34,12 +34,17 @@
         "wikipedia":{
           "base_url": "https://es.wikipedia.org/wiki/Wikipedia:Portada",
           "wordSearch": "Universidad San Ignacio de Loyola",
+          "showSearchList": 0,
           "usil": {
             "infobox": {
               "columnName": "Presidente",
               "columnValue": "Raúl Diez Canseco Terry"
             }
           }
+        },
+        "github": {
+          "base_url": "https://github.com/",
+          "wordSearch": "org:facebook"
         }
       }
     }
