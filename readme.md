@@ -66,14 +66,13 @@ npm run start
 
 If you don't have any error, you should have this log in the shell or cmd:
 
-![image](https://user-images.githubusercontent.com/3322836/225386044-ac7f7faa-1aef-474a-8b4f-7faaa7e0c025.png)
+![image](https://github.com/usil/seleniumjs4all-demo/assets/77288944/aa6e9c41-a9a8-48bb-953d-11ea8c875959)
 
 and in the **report** folder you will find a folder with the execution id:
 
 ![image](https://user-images.githubusercontent.com/3322836/225386312-2c3dfcb8-4c93-4b87-9cbc-39943b7f91de.png)
 
-![image](https://user-images.githubusercontent.com/3322836/225387370-57ecdf8c-929b-49fa-8178-3dfa62ffcab6.png)
-
+![image](https://github.com/usil/seleniumjs4all-demo/assets/77288944/61b0035d-76dc-4007-8c84-55915e6400c9)
 
 # Contributors
 
@@ -91,5 +90,11 @@ and in the **report** folder you will find a folder with the execution id:
       <label><a href="https://github.com/iSkyNavy">Diego Ramos</a></label>
       <br />
     </td>
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/77288944?v=4" width="100px;"/>
+      <br />
+      <label><a href="https://github.com/madeliyricra">Madeliy Ricra</a></label>
+      <br />
+    </td>  
   </tbody>
 </table>
