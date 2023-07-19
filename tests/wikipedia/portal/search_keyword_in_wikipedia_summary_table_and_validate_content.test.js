@@ -8,6 +8,7 @@ describe('Wikipedia - portal', () => {
     const wikiSearch = getVariable("wikipedia.wordSearch");
     const expectColumnName = getVariable("wikipedia.usil.infobox.columnName");
     const expectColumnValue = getVariable("wikipedia.usil.infobox.columnValue");
+    const showSearchList = getVariable("wikipedia.showSearchList");
     beforeAll(async () => {
         driver = await getBrowserDriver();
         global.driver = driver;
@@ -16,23 +17,28 @@ describe('Wikipedia - portal', () => {
     test('search keyword in wikipedia summary table and validate content', async () => {
         const searchBox = await driver.findElement(By.name("search"));
         await searchBox.sendKeys(wikiSearch, Key.RETURN);
-        let el = await driver.findElement(By.className("mw-search-results"));
-        const conition = until.elementIsVisible(el);
-        await driver.wait(driver => conition.fn(driver), 3000);
-        const searchList = await driver.findElement(By.className("mw-search-results"));
-        const linksContainers = await searchList.findElements(
-            By.className("mw-search-result")
-        );
-        //get the first child of the option list
-        const firstResult = await linksContainers[0].findElement(
-            By.className("mw-search-result-heading")
-        );
-        //validate if exist and added click function
-        const conditionFirstResult = until.elementIsVisible(firstResult);
-        await driver.wait(driver => conditionFirstResult.fn(driver), 3000);
-        const firstResultLink = await firstResult.findElement(By.xpath("./a"));
-        await firstResultLink.click();
-        // await driver.executeScript("arguments[0].click();", firstResultLink);
+
+       if(showSearchList == 1){
+            const condition = await until.elementLocated(By.className("mw-search-results"));
+            await driver.wait(async driver => condition.fn(driver) , 4 * 1000, "Buscador no encontrado", 5 * 100);
+
+            const searchList = await driver.findElement(By.className("mw-search-results"));
+            const linksContainers = await searchList.findElements(
+                By.className("mw-search-result")
+            );
+    
+            //get the first child of the option list
+            const firstResult = await linksContainers[0].findElement(
+                By.className("mw-search-result-heading")
+            );
+            //validate if exist and added click function
+            const conditionFirstResult = until.elementIsVisible(firstResult);
+            await driver.wait(driver => conditionFirstResult.fn(driver), 3000);
+            const firstResultLink = await firstResult.findElement(By.xpath("./a"));
+            await firstResultLink.click();
+            // await driver.executeScript("arguments[0].click();", firstResultLink);
+        }
+
         //get box
         const box = await driver.findElement(By.className("infobox"));
         //valite if box exist and get ths and tds

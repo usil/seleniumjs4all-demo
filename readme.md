@@ -53,7 +53,7 @@ If your tests has variables, add them in this line **#ENV_VAR_HERE** of Dockerfi
 
 ## Run tests with chrome & windows
 
-For windows user, check this https://github.com/usil/seleniumjs4all/wiki/Troubleshooting#webdrivererror-unknown-error-cannot-find-chrome-binary
+For windows user, check this https://github.com/usil/seleniumjs4all/wiki/Unknown_error_cannot_find_chrome_binary
 
 ```bash
 npm uninstall chromedriver
