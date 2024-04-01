@@ -34,7 +34,7 @@ By default these files are already configured.
 
 For complex escenarios check this: https://github.com/usil/seleniumjs4all/tree/fix-windows#advanced-configurations or to send email notifications https://github.com/usil/seleniumjs4all/wiki/Send-report-by-mail
 
-## Run tests with chrome & linux
+## Run tests with chrome
 
 ```bash
 npm uninstall chromedriver
@@ -42,6 +42,8 @@ npm install chromedriver --detect_chromedriver_version
 npm install
 npm run start
 ```
+
+For firefox check [this](https://github.com/usil/seleniumjs4all/wiki/Firefox)
 
 ## Run tests with linux & docker
 
