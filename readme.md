@@ -7,32 +7,7 @@ More technical details can be found here https://github.com/usil/seleniumjs4all
 ## Requirements
 
 - nodejs >= 16
-
-**For Linux**
-
-- Google Chrome 110.0.5481.177-1 . How to install a custom version [here](https://github.com/usil/seleniumjs4all/wiki/Browsers#chrome--linux)
-- Docker (optional)
-
-**For Windows**
-
-- Chromium <= 110.0.5481 (Tested on 2023 march)
-  - Installer link: https://chromium.cypress.io/win64/beta/110.0.5481.38 
-  - More versions here: https://chromium.cypress.io/
-
-**For server executions with docker & headless**
-
-- Docker
-
-## Config
-
-By default these files are already configured.
-
-```
-- Config your browserOptions.json
-- Config your testOptions.json
-```
-
-For complex escenarios check this: https://github.com/usil/seleniumjs4all/tree/fix-windows#advanced-configurations or to send email notifications https://github.com/usil/seleniumjs4all/wiki/Send-report-by-mail
+- Chrome or firefox. If you have problems with chrome, you can use [chromium](https://github.com/usil/seleniumjs4all/wiki/Chromium)
 
 ## Run tests with chrome
 
@@ -43,26 +18,16 @@ npm install
 npm run start
 ```
 
-For firefox check [this](https://github.com/usil/seleniumjs4all/wiki/Firefox)
+- For firefox check [this](https://github.com/usil/seleniumjs4all/wiki/Firefox)
+- For chromium check [this](https://github.com/usil/seleniumjs4all/wiki/Chromium)
 
-## Run tests with linux & docker
+## Run tests with linux & docker & chrome
 
 ```
-docker build --progress=plain -t seleniumjs4all-demo-selenium-automations-nodejs .
+docker build --progress=plain -t acme-tests .
 ```
 
 If your tests has variables, add them in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
-
-## Run tests with chrome & windows
-
-For windows user, check this https://github.com/usil/seleniumjs4all/wiki/Unknown_error_cannot_find_chrome_binary
-
-```bash
-npm uninstall chromedriver
-npm install chromedriver --include_chromium --detect_chromedriver_version
-npm install
-npm run start
-```
 
 ## Result
 
