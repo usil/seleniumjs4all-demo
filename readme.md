@@ -1,4 +1,4 @@
-# **seleniumjs4all - demo**
+# seleniumjs4all - demo
 
 Simple hello world tests using selenium and seleniumjs4all on this pages:
 
@@ -22,21 +22,13 @@ npm run start
 
 Just wait until the end
 
-## Run tests with docker
-
-```
-docker build -t acme-tests .
-```
-
-If your tests has variables, add them in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
-
 ## Result
 
 If you don't have any error, you should have this log in the shell or cmd:
 
 ![image](https://github.com/usil/seleniumjs4all-demo/assets/77288944/aa6e9c41-a9a8-48bb-953d-11ea8c875959)
 
-and in the **report** folder you will find a folder with the execution id:
+and in the **report** folder you will find a folder with the **execution id**:
 
 ![image](https://user-images.githubusercontent.com/3322836/225386312-2c3dfcb8-4c93-4b87-9cbc-39943b7f91de.png)
 
@@ -54,10 +46,17 @@ and run again the tests with
 npm run start
 ```
 
-You will see all the error log and an html report with the error and a screenshot of the error.
+You will see all the error log and an html report (with a folder with the **execution id** as name) with the error and a screenshot of the error.
 
+## Run tests with docker
 
-# Contributors
+```
+docker build -t acme-tests .
+```
+
+If your tests has variables, add them in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
+
+## Contributors
 
 <table>
   <tbody>
