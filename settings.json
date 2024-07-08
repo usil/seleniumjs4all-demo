@@ -8,7 +8,7 @@
     "menu",
     "scenario"
   ],
-  "browserOptions": {
+  "browserSettings": {
     "options" : {
       "addArguments": [
         "--log-level=1",

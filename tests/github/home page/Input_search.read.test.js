@@ -14,7 +14,7 @@ describe('GitHub - Inicio', () => {
         await driver.get(URL_BASE);
       });
 
-    test('[] - Debe mostrar la url pagina web y twitter de la busqueda encontrada', async () => {
+    test('[] - Debe mostrar la direccion y la url de la pagina', async () => {
         const searchContainer = driver.findElement(By.className('header-search-button'));
         await searchContainer.click();
     
@@ -28,18 +28,11 @@ describe('GitHub - Inicio', () => {
         const containerList = await driver.findElement(By.className('has-location'));
         const itemsList = await containerList.findElements(By.tagName('li'));
 
-        for (let i = 2; i <= 3 && i < itemsList.length; i++) {
-            const text = await itemsList[i].getText();
-            if(i == 2){
-                twitterResult = text;
-            }
-            if(i == 3){
-                urlResult= text;
-            }
-        }
+        var address = await itemsList[1].getText();
+        var websiteUrl = await itemsList[2].getText();
 
-        expect(twitterResult, "Resultado de Twitter no encontrado").to.exist;
-        expect(urlResult, "Resultado de sitio web no encontrado").to.exist;
+        expect(address.includes("California"), "Direccion debe contener palabra: California").to.be.true;
+        expect(websiteUrl, "Resultado de sitio web no encontrado").to.exist;
     });
     afterAll(async () => {
         await driver.quit()

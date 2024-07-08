@@ -1,30 +1,31 @@
 # **seleniumjs4all - demo**
 
-Simple hello world tests usign selenium and seleniumjs4all
+Simple hello world tests using selenium and seleniumjs4all on this pages:
+
+- google
+- wikipedia
+- youtube
+- github
 
 More technical details can be found here https://github.com/usil/seleniumjs4all
 
 ## Requirements
 
 - nodejs >= 16
-- Chrome or firefox. If you have problems with chrome, you can use [chromium](https://github.com/usil/seleniumjs4all/wiki/Chromium)
 
-## Run tests with chrome
+## Run tests manually
 
 ```bash
-npm uninstall chromedriver
-npm install chromedriver --detect_chromedriver_version
 npm install
 npm run start
 ```
 
-- For firefox check [this](https://github.com/usil/seleniumjs4all/wiki/Firefox)
-- For chromium check [this](https://github.com/usil/seleniumjs4all/wiki/Chromium)
+Just wait until the end
 
-## Run tests with linux & docker & chrome
+## Run tests with docker
 
 ```
-docker build --progress=plain -t acme-tests .
+docker build -t acme-tests .
 ```
 
 If your tests has variables, add them in this line **#ENV_VAR_HERE** of Dockerfile in format `ENV foo=bar` 
@@ -40,6 +41,21 @@ and in the **report** folder you will find a folder with the execution id:
 ![image](https://user-images.githubusercontent.com/3322836/225386312-2c3dfcb8-4c93-4b87-9cbc-39943b7f91de.png)
 
 ![image](https://github.com/usil/seleniumjs4all-demo/assets/77288944/61b0035d-76dc-4007-8c84-55915e6400c9)
+
+## Error report
+
+To force a failure you can change some expected values in the settings.json file. For example change the CEO name here
+
+![image](https://github.com/usil/seleniumjs4all-demo/assets/3322836/2157f856-2eb3-4737-b1e5-cb6dfeda83d0)
+
+and run again the tests with 
+
+```bash
+npm run start
+```
+
+You will see all the error log and an html report with the error and a screenshot of the error.
+
 
 # Contributors
 
